@@ -1,0 +1,216 @@
+.container {
+    margin-top: 10px;
+}
+
+svg {
+  margin: 0 auto 10px;
+  display: block;
+  max-width: 100%;
+}
+
+.birthViz {
+    height: auto;
+    width: auto;
+}
+svg#yearScale {
+    height: 40px;
+    max-width: 100%;
+}
+
+.tick line {
+    stroke: #ccc;
+    stroke-dasharray: 10, 5;
+}
+
+svg#scaleYears>g>g.tick line {
+    stroke: gray;
+}
+
+/*svg#scaleYears >g >g.tick {
+    transform: rotate(-70deg);
+}*/
+
+svg#scaleYears>g > g.tick text {
+    transform: rotate(-50deg);
+    text-anchor: end;
+}
+
+rect {
+    transition: all 0.30s;
+    -moz-transition: all 0.30s;
+}
+
+rect:hover {
+    fill:#004080;
+}
+
+div#tooltip {	
+    position: fixed;
+    left: 150px;
+    top: 250px;			
+    text-align: center;			
+    width: 120px;					
+    height: 60px;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: #ddd;	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+
+tr {
+    border: 1px gray solid;
+}
+
+td {
+    font-size: 10px;
+}
+
+td.data {
+    font-weight: 900;
+}
+
+input[type=range] {
+    /*removes default webkit styles*/
+    -webkit-appearance: none;
+    
+    /*fix for FF unable to apply focus style bug */
+    border: 1px solid white;
+    
+    /*required for proper track sizing in FF*/
+    width: 360px;
+    margin-left: 40px;
+}
+.slider {
+    margin-top: 10px;
+    /*margin-left: 314px;*/
+}
+@media (max-width: 2800px) {
+    div.center.slider.yearScale {
+        margin-left: 314px;
+    }
+}
+@media (max-width: 1100px) {
+    div.center.slider.yearScale {
+        margin-left: 170px;
+    }
+}
+@media (max-width: 900px) {
+    div.center.slider.yearScale {
+        margin-left: 120px;
+    }
+}
+@media (max-width: 680px) {
+    div.center.slider.yearScale {
+        margin-left: 30px;
+    }
+}
+@media (max-width: 520px) {
+    div.center.slider.yearScale {
+        margin-left: 5px;
+    }
+}
+@media(max-width:380px) {
+    div.center.slider.yearScale {
+        margin-left: 5px;
+    }
+}
+@media(max-width:180px) {
+    div.center.slider.yearScale {
+        margin-left: 5px;
+    }
+}
+
+.startYear{
+    width:        100px;
+    margin-left:  30px;
+    margin-right: 330px;
+    display: inline;
+}
+
+.endYear{
+    width:        100px;
+    margin-right: 20px;
+    display: inline;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 360px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #660066;
+    margin-top: -4px;
+}
+input[type=range]:focus {
+    outline: none;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #ccc;
+}
+
+input[type=range]::-moz-range-track {
+    width: 360px;
+    height: 5px;
+    background: #ddd;
+    border: none;
+    border-radius: 3px;
+}
+input[type=range]::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #660066;
+}
+
+/*hide the outline behind the border*/
+input[type=range]:-moz-focusring{
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+input[type=range]::-ms-track {
+    width: 360px;
+    height: 5px;
+    
+    /*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+    background: transparent;
+    
+    /*leave room for the larger thumb to overflow with a transparent border */
+    border-color: transparent;
+    border-width: 6px 0;
+
+    /*remove default tick marks*/
+    color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+    background: #777;
+    border-radius: 10px;
+}
+input[type=range]::-ms-fill-upper {
+    background: #ddd;
+    border-radius: 10px;
+}
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #660066;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #888;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: #ccc;
+}
