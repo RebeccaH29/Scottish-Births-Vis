@@ -121,6 +121,5 @@ var svg2 = d3.select('.yearScale')
         
          svg2.append("g")
         .attr("transform", "translate(0," + (40-(padding)) + ")")
-        //.attr("transform", "rotate(70deg)")
             .call(xAxis2)
 
