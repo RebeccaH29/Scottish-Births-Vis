@@ -70,29 +70,7 @@ d3.select("svg")
         .text(function(d) {
             return d.month + " " + d.year + ": " + d.births + " births";
     });
-    //.select('title#yearLabel')
-      //  .attr('id', 'yearLabel')
-        //.text(function(d) {
-          //  return "Year: " + d.year;
-        //})
-
-//.select("text")
-//.data(birthData.filter(function (d) {
-  //  return d.year === minYear;
-//}))
-  //  .enter()
-    //.append("text")
-    //.text(function (d) {
-      //  return d.births
-    //})
-//.attr("y", function(d) {
-  //              return yScale(d.births);
-    //    })
-      //  .attr("x", function(d,i) {
-        //        return ((barWidth + barPadding) * i) + padding;
-        //}); 
     
-
 d3.select("input")
     .on("input", function() {
         var year = +d3.event.target.value;
@@ -115,10 +93,7 @@ d3.select("input")
         .text(function(d) {
             return d.month + " " + d.year + ": " + d.births + " births";
         })
-        //d3.text('popupInfo.html', html => {
-          //  d3.select('body').append('div')
-            //    .attr('id', 'tooltip').html(html)
-        //});
+        
         d3.selectAll('td.data')
             .data(birthData.filter(function(d) {
                 return d.year === year;
@@ -149,14 +124,3 @@ var svg2 = d3.select('.yearScale')
         //.attr("transform", "rotate(70deg)")
             .call(xAxis2)
 
-        //svg2.selectAll('.tick')
-        //.attr("transform", "rotate(20deg)")
-        //svg2.selectAll('text')
-            //.attr("transform", "rotate(-70deg)")
-            //.attr("transform", function(d) {
-              //  return "rotate: (-70deg)"})
-            //.attr("text-anchor", function(d) {
-             //   return "end"
-            //})
-            
-            //});
